@@ -1,10 +1,19 @@
 import openpyxl
+import argparse
 
 from youth_study import YouthStudyTianjin
 
 
+# 引入参数
+def get_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-c', '--cookie', type=str, required=True, help='cookie')
+
+    return parser.parse_args()
+
+
 def main():
-    JSESSIONID = 'D7C616BB218F5A7C90AD7F667F1A8967'
+    JSESSIONID = get_args().cookie
 
     # 读取需要学习的人员名单
     code_dic = {
