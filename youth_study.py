@@ -4,7 +4,7 @@ import ddddocr
 
 class YouthStudyTianjin:
 
-    def __init__(self, JSESSIONID, name, tel, code):
+    def __init__(self, JSESSIONID, name, tel, section_id):
         self.headers = {
             'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36 NetType/WIFI MicroMessenger/6.8.0(0x16080000) MacWechat/3.7.1(0x13070114) XWEB/30419 Flue',
             'Cookie': f'HWWAFSESID=ae5d573f418e8e1d1d; HWWAFSESTIME=1682684736743; JSESSIONID={JSESSIONID}',
@@ -12,7 +12,7 @@ class YouthStudyTianjin:
 
         self.name = name
         self.tel = tel
-        self.code = code
+        self.section_id = section_id
 
     # 获取已经学习完的人员姓名
     def get_learned_name(self):
@@ -35,7 +35,7 @@ class YouthStudyTianjin:
             return True
 
         data = {
-            'deptId': self.code,
+            'deptId': self.section_id,
             'qingnianType': '1',
             'truename': self.name,
             'sex': '1',
