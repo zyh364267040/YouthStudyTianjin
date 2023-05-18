@@ -18,7 +18,8 @@ def main():
     # 读取需要学习的人员名单
     section_id_dic = {
         'qipu': '1001016017022000',
-        'minzhu': '1001016017009000'
+        'minzhu': '1001016017009000',
+        'liupu': '1001016017024000'
     }
     wb = openpyxl.load_workbook('团员信息.xlsx')
     sheet = wb.active

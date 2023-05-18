@@ -10,7 +10,7 @@ python main.py --cookie
 
 ### 示例
 ```shell
-python main.py -c 7F5335ADA32F865C5F2E662589BD4B6B
+python main.py -c AA532C5445A95ACDC15816DB472F4CDA
 ```
 
 ## 参数
